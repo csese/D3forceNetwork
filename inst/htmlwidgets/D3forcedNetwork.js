@@ -25,7 +25,7 @@ HTMLWidgets.widget({
   renderValue: function(el, x, force) {
           function nodeSize(nodesize) {
 
-        return Math.sqrt(nodesize)*6
+        return Math.sqrt(nodesize)+6
 
         }
 
