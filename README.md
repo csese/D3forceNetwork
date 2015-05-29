@@ -16,6 +16,7 @@ You can install **D3forcedNetwork** from GitHub as follows:
 ```S
 devtools::install_github('csese/D3forcedNetwork')
 ```
+This is not yet deployed to CRAN. 
 
 ## Usage
 
@@ -34,3 +35,4 @@ D3forcedNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
              colourScale = "d3.scale.category20b()")
 ```
 
+![Alt text](/Example.png?raw=true "Forced Network including legend and radius modification with R")
