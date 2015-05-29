@@ -3,8 +3,11 @@
 Version 0.1
 
 This is a package inspired from the work from Christopher Gandrud. 
+
 He implemented the [d3Network](http://christophergandrud.github.io/d3Network/) package to the
 [htmlwidgets](https://github.com/ramnathv/htmlwidgets) framework.
+
+Here the user can only use the forced network layout. However, he can add a legend depending on the group as well as changing the radius of the nodes. 
 
 ## Installation
 
