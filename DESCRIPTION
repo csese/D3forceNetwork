@@ -5,6 +5,15 @@ Date: 2015-05-29
 Authors@R: person("Charles", "Sese", email = "c.sese@outlook.com", role = c("aut", "cre"))
 URL: http://github.com/csese/D3forcedNetwork/
 Description: Creates D3 JavaScript network graphs from R.
-Depends: R (>= 3.2.0)
-License: What license is it under?
+License: GPL (>= 3)
+Depends:
+    R (>= 3.0.0)
+Imports:
+    htmlwidgets (>= 0.3.2),
+    plyr,
+    rjson
+Suggests:
+    htmltools (>= 0.2.6),
+    RCurl
+Enhances: knitr, shiny
 LazyData: true
