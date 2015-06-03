@@ -147,7 +147,7 @@ HTMLWidgets.widget({
     function mouseover() {
       d3.select(this).select("circle").transition()
         .duration(750)
-        .attr("r", function(d){return nodeSize(d)+10;});
+        .attr("r", function(d){return nodeSize(d)+5;});
       d3.select(this).select("text").transition()
         .duration(750)
         .attr("x", 13)

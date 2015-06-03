@@ -126,7 +126,7 @@ D3forceNetwork <- function(Links, Nodes, Source, Target, Value, NodeID, Nodesize
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'D3forcedNetwork',
+    name = 'D3forceNetwork',
     x= list(links = LinksDF, nodes = NodesDF, options = options),
     width = width,
     height = height,
