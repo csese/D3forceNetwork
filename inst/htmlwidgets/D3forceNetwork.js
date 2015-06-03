@@ -1,6 +1,6 @@
 HTMLWidgets.widget({
 
-  name: 'D3forcedNetwork',
+  name: 'D3forceNetwork',
 
   type: 'output',
 
@@ -29,7 +29,7 @@ HTMLWidgets.widget({
                     return eval(options.radiusCalculation);
                     
             }else{
-                    return 6}
+                    return 6;}
             
     }
 
@@ -116,8 +116,7 @@ HTMLWidgets.widget({
         
 
     node.append("circle")
-    .attr("r", function(d){return nodeSize(d);})
-      //.attr("r", function(d){if(eval(options.nodesize)){return nodeSize(d);}else{return 6}})
+      .attr("r", function(d){return nodeSize(d);})
       .style("stroke", "#fff")
       .style("opacity", options.opacity)
       .style("stroke-width", "1.5px");

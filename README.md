@@ -11,16 +11,16 @@ Here the user can only use the forced network layout. However, he can add a lege
 
 ## Installation
 
-You can install **D3forcedNetwork** from GitHub as follows:
+You can install **D3forceNetwork** from GitHub as follows:
 
 ```S
-devtools::install_github('csese/D3forcedNetwork')
+devtools::install_github('csese/D3forceNetwork')
 ```
 This is not yet deployed to CRAN. 
 
 ## Usage
 
-Here's an example of `D3forcedNetwork`:
+Here's an example of `D3forceNetwork`:
 
 ```S
 # Load data
@@ -28,11 +28,11 @@ data(MisLinks)
 data(MisNodes)
 
 # Plot
-D3forcedNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
+D3forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
              Target = "target", Value = "value", NodeID = "name",
              Nodesize = 'size',Group = "group", opacity = 1, 
              linkDistance = 100,charge = -400, legend = TRUE,
              colourScale = "d3.scale.category20b()")
 ```
 
-![Alt text](/Example.png?raw=true "Forced Network including legend and radius modification with R")
+![Alt text](/Example.png?raw=true "Force Network including legend and radius modification with R")
