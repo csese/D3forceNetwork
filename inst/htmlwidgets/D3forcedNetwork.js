@@ -23,9 +23,14 @@ HTMLWidgets.widget({
   },
 
   renderValue: function(el, x, force) {
-          
+    // Compute the node radius  using the math expression specified       
     function nodeSize(d) {
-                return eval(options.radiusCalculation);
+            if(eval(options.nodesize)){
+                    return eval(options.radiusCalculation);
+                    
+            }else{
+                    return 6}
+            
     }
 
     // alias options
@@ -111,7 +116,8 @@ HTMLWidgets.widget({
         
 
     node.append("circle")
-      .attr("r", function(d){if(eval(options.nodesize)){return nodeSize(d);}else{return 6}})
+    .attr("r", function(d){return nodeSize(d);})
+      //.attr("r", function(d){if(eval(options.nodesize)){return nodeSize(d);}else{return 6}})
       .style("stroke", "#fff")
       .style("opacity", options.opacity)
       .style("stroke-width", "1.5px");
@@ -141,7 +147,7 @@ HTMLWidgets.widget({
     function mouseover() {
       d3.select(this).select("circle").transition()
         .duration(750)
-        .attr("r", function(d){if(eval(options.nodesize)){return nodeSize(d)+10;}else{return 6+10}});
+        .attr("r", function(d){return nodeSize(d)+10;});
       d3.select(this).select("text").transition()
         .duration(750)
         .attr("x", 13)
@@ -153,7 +159,7 @@ HTMLWidgets.widget({
     function mouseout() {
       d3.select(this).select("circle").transition()
         .duration(750)
-        .attr("r", function(d){if(eval(options.nodesize)){return nodeSize(d)+2;}else{return 6+2}});
+        .attr("r", function(d){return nodeSize(d)+2;});
       d3.select(this).select("text").transition()
         .style("opacity", 0);
     }
