@@ -1,6 +1,6 @@
 #' Create a D3 JavaScript force directed network graph.
-#' @name D3forcedNetwork-package
-#' @aliases D3forcedNetwork
+#' @name D3forceNetwork-package
+#' @aliases D3forceNetwork
 #' @docType package
 #'
 #' @param Links a data frame object with the links between the nodes. It should
@@ -58,7 +58,7 @@
 #' data(MisNodes)
 #'
 #' # Create graph
-#' forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
+#' D3forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
 #'              Target = "target", Value = "value", NodeID = "name",
 #'              Group = "group", opacity = 0.4)
 #'
@@ -71,7 +71,7 @@
 #' @importFrom htmlwidgets shinyRenderWidget
 #'
 #' @export
-D3forcedNetwork <- function(Links, Nodes, Source, Target, Value, NodeID, Nodesize,
+D3forceNetwork <- function(Links, Nodes, Source, Target, Value, NodeID, Nodesize,
                             Group, height = NULL, width = NULL, colourScale = "d3.scale.category20()",
                             fontsize = 7, linkDistance = 50, legend = FALSE, 
                             linkWidth = "function(d) { return Math.sqrt(d.value); }", 
@@ -131,14 +131,14 @@ D3forcedNetwork <- function(Links, Nodes, Source, Target, Value, NodeID, Nodesiz
     width = width,
     height = height,
     htmlwidgets::sizingPolicy(padding = 0, browser.fill = TRUE),
-    package = 'D3forcedNetwork'
+    package = 'D3forceNetwork'
   )
 }
 
 #' Widget output function for use in Shiny
 #'
 #' @export
-D3forcedNetworkOutput <- function(outputId, width = '100%', height = '400px'){
+D3forceNetworkOutput <- function(outputId, width = '100%', height = '400px'){
   shinyWidgetOutput(outputId, 'D3forcedNetwork', width, height, package = 'D3forcedNetwork')
 }
 
@@ -147,5 +147,5 @@ D3forcedNetworkOutput <- function(outputId, width = '100%', height = '400px'){
 #' @export
 renderD3forcedNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  shinyRenderWidget(expr, D3forcedNetworkOutput, env, quoted = TRUE)
+  shinyRenderWidget(expr, D3forceNetworkOutput, env, quoted = TRUE)
 }

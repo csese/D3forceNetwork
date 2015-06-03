@@ -1,9 +1,9 @@
-Package: D3forcedNetwork
+Package: D3forceNetwork
 Title: D3 javascript graph from R
 Version: 0.0.0.9000
 Date: 2015-05-29
 Authors@R: person("Charles", "Sese", email = "c.sese@outlook.com", role = c("aut", "cre"))
-URL: http://github.com/csese/D3forcedNetwork/
+URL: http://github.com/csese/D3forceNetwork/
 Description: Creates D3 JavaScript network graphs from R.
 License: GPL (>= 3)
 Depends:
