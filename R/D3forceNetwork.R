@@ -139,13 +139,13 @@ D3forceNetwork <- function(Links, Nodes, Source, Target, Value, NodeID, Nodesize
 #'
 #' @export
 D3forceNetworkOutput <- function(outputId, width = '100%', height = '400px'){
-  shinyWidgetOutput(outputId, 'D3forcedNetwork', width, height, package = 'D3forcedNetwork')
+  shinyWidgetOutput(outputId, 'D3forceNetwork', width, height, package = 'D3forceNetwork')
 }
 
 #' Widget render function for use in Shiny
 #'
 #' @export
-renderD3forcedNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
+renderD3forceNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
   shinyRenderWidget(expr, D3forceNetworkOutput, env, quoted = TRUE)
 }
