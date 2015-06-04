@@ -1,5 +1,7 @@
 # D3 JavaScript Network Graphs from R
-
+########################################
+## DEPRECATED: Those features have now been implemented into the d3Network package!
+########################################
 Version 0.1
 
 This is a package inspired from the work from Christopher Gandrud. 
